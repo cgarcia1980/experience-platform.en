@@ -9,13 +9,46 @@ description: Use this template to create public documentation for your destinati
 
 ## Overview {#overview}. 'explaing an overview of DataX'
 
-*Provide a short overview for your company, including the value it provides to customers. Include a link to your product documentation homepage, for further reading.*
+DataX is an aggregate Verizon Media infrastructure that hosts various components that enable Verizon Media to exchange data with its external partners in a secure, automated and scalable manner.
+
 
 >[!IMPORTANT]. 
 >
->This documentation page was created by the *YOURDESTINATION* (Replace this with DataX) team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*
+>This documentation page was created by Verizon Media's DataX team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*
 
 ## Prerequisites {#prerequisites} (Include MDM IDs, rate limit, etc.)
+
+MDM ID:
+An MDM ID is a A node’s (Segment) data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers)
+
+Rate Limit: (https://developer.verizonmedia.com/datax/guide/rate-limits/)
+DataX is rate-limited per the following quota limits for taxonomy and audience posts:
+
+Error Code: 429 -  Too many requests
+Error Message - Rate Limit exceeded per hour (Limit: 100)
+Description - Number of requests allowed in an hour per provider
+
+Taxonomy Metadata: (https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)
+
+The Taxonomy resource defines an extension over the Base DataX Metadata structure
+
+{
+
+  >>(Base DataX Metadata)<<
+
+        "extensions" : { "action" :
+        {string}, "incrementalData" :
+        {
+                "taxonomyId": {string}
+                },
+                "links" : [{
+                "rel"   : "https://datax.yahooapis.com/rels/fullTaxonomy", "title" : "Full
+                Taxonomy post processing",
+                "href": {string}
+                ]
+        }
+}
+
 
 *Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
 
@@ -35,8 +68,6 @@ description: Use this template to create public documentation for your destinati
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
@@ -64,7 +95,7 @@ To help you better understand how and when you should use the *YOURDESTINATION* 
 *An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YOURDESTINATION, to display ads in their customers' social media feeds.*
 
 ## Connect to destination {#connect}
-(MDM ID)
+An MDM ID is a A node’s (Segment) data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers).
 
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
