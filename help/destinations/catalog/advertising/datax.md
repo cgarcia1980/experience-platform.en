@@ -1,11 +1,9 @@
 
-title: Self-service template // Replace with the name of destination
-description: Use this template to create public documentation for your destination in the Adobe Experience Platform catalog. // Replace with the paragraph in the Overview section
+title: Verizon Media's DataX Integration
+description: DataX is an aggregate Verizon Media infrastructure that hosts various components that enable Verizon Media to exchange data with its external partners in a secure, automated and scalable manner.
 ---
 
 # DataX Integration
-
-*As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 
 ## Overview {#overview}. 'explaing an overview of DataX'
 
@@ -14,9 +12,9 @@ DataX is an aggregate Verizon Media infrastructure that hosts various components
 
 >[!IMPORTANT]. 
 >
->This documentation page was created by Verizon Media's DataX team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*
+>This documentation page was created by Verizon Media's DataX team. For any inquiries or update requests, please contact them directly at dataops@verizonmedia.com
 
-## Prerequisites {#prerequisites} (Include MDM IDs, rate limit, etc.)
+## Prerequisites {#prerequisites}
 
 MDM ID:
 An MDM ID is a A node’s (Segment) data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers)
@@ -50,21 +48,12 @@ The Taxonomy resource defines an extension over the Base DataX Metadata structur
 }
 
 
-*Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
-
-* *needing to be added to an allow list*
-* *requirements for email hashing*
-* *any account specifics on your side*
-* *how to obtain an API key to connect to your platform*
-
-*You can link out to your relevant documentation if that would be useful to customers.*
-
 ## Supported identities {#supported-identities}
 
 
-*Add information in this section about the identities supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and add values that are not prefilled.*
 
-*YOURDESTINATION* supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+
+Verizon Media supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -74,29 +63,23 @@ The Taxonomy resource defines an extension over the Base DataX Metadata structur
 
 ## Export type {#export-type}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YOURDESTINATION* destination.
+**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (Email) used in the Verizon Media destination.
 
 ## Use Cases {#use-cases}
 (Add 1-2 use cases for advertisers to use this new destination - VMG)
 
-To help you better understand how and when you should use the *YOURDESTINATION* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the DataX destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 
 ### Use Case #1
+
+DataX APIs are available for advertisers that want to target a specific audience group keyed of email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
 
 *For mobile messaging platforms:*
 
 *A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
 
-### Use Case #2
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YOURDESTINATION, to display ads in their customers' social media feeds.*
-
 ## Connect to destination {#connect}
-An MDM ID is a A node’s (Segment) data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers).
-
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -108,7 +91,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your *YOURDESTINATION* account ID.
+*  **[!MDM ID]**: An MDM ID is a A node’s (Segment) data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers).
 
 ## Activate segments to this destination {#activate}
 
