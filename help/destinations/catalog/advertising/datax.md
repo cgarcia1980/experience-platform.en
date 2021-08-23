@@ -17,6 +17,7 @@ DataX is an aggregate Verizon Media infrastructure that hosts various components
 ## Prerequisites {#prerequisites}
 
 MDM ID:
+Is a mandatory field for users to connect to their selected destination.
 An MDM ID is a A node’s (Segment) data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers)
 
 Rate Limit: (https://developer.verizonmedia.com/datax/guide/rate-limits/)
